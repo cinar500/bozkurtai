@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BozkurtAi.app</title>
+
+  <meta name="application-name" content="BozkurtAi">
+  <meta name="apple-mobile-web-app-title" content="BozkurtAi">
+  <meta name="description" content="BozkurtAi – Türkçe Yapay Zekâ Sohbet Asistanı">
+  <meta name="theme-color" content="#0b0f17">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="moon"></div>
+    <div class="mountains"></div>
+  </div>
+
+  <header class="header">
+    <img class="logo" src="/icon-192.png" alt="BozkurtAi Logo" />
+    <div class="brand">
+      <div class="brandTitle">BozkurtAi</div>
+      <div class="brandSub">Türkçe Yapay Zekâ Sohbet Asistanı · Demo</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <h1>🐺 BozkurtAi’ye hoş geldin</h1>
+      <p>Site adı: <b>BozkurtAi.app</b> · Uygulama adı: <b>BozkurtAi</b></p>
+      <div class="row">
+        <a class="btn primary" href="/app.html">Sohbete Başla</a>
+        <a class="btn" href="/about.html">Hakkında</a>
+      </div>
+      <p class="muted">İpucu: Telefonunda “Ana ekrana ekle” yaparsan uygulama gibi açılır.</p>
+    </section>
+  </main>
+
+  <script>
+    // PWA: service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js").catch(()=>{});
+    }
+  </script>
+</body>
+</html>

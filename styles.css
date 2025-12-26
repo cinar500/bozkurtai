@@ -1,0 +1,92 @@
+:root{
+  --bg:#0b0f17;
+  --card:#101827cc;
+  --border:#23314d;
+  --text:#e7eefc;
+  --muted:#9bb0d3;
+  --accent:#7c5cff;
+  --radius:18px;
+  --shadow: 0 20px 60px rgba(0,0,0,.45);
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  background: var(--bg);
+  overflow:hidden;
+}
+.bg{position:fixed; inset:0; pointer-events:none;}
+.moon{
+  position:absolute; right:8vw; top:8vh;
+  width:140px; height:140px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #fff, #d6dcff 55%, #9aa7ff 100%);
+  box-shadow: 0 0 60px rgba(255,255,255,.20), 0 0 140px rgba(124,92,255,.25);
+  opacity:.9;
+}
+.mountains{
+  position:absolute; left:-10vw; right:-10vw; bottom:-10vh; height:55vh;
+  background:
+    linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0)),
+    conic-gradient(from 220deg at 20% 100%, #0c1424 0 35%, transparent 0 100%),
+    conic-gradient(from 210deg at 40% 100%, #0a1220 0 35%, transparent 0 100%),
+    conic-gradient(from 230deg at 60% 100%, #0b1322 0 35%, transparent 0 100%),
+    conic-gradient(from 200deg at 80% 100%, #09101d 0 35%, transparent 0 100%);
+  opacity:.95;
+}
+.header{
+  position:relative;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:18px 18px 0 18px;
+}
+.logo{
+  width:44px; height:44px;
+  border-radius:14px;
+  border:1px solid rgba(35,49,77,.7);
+  box-shadow: var(--shadow);
+}
+.brandTitle{font-weight:900; letter-spacing:.2px; font-size:18px}
+.brandSub{color:var(--muted); font-size:12px}
+
+.main{
+  position:relative;
+  height:calc(100% - 80px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+.card{
+  width:min(720px, 94vw);
+  border-radius: var(--radius);
+  border:1px solid rgba(35,49,77,.65);
+  background: rgba(16,24,39,.75);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  padding:18px;
+}
+.card h1{margin:0 0 10px 0}
+.card p{margin:8px 0}
+.row{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid rgba(35,49,77,.75);
+  background: rgba(15,22,36,.65);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:800;
+}
+.btn.primary{
+  background: rgba(124,92,255,.20);
+  border-color: rgba(124,92,255,.65);
+}
+.btn:hover{border-color: rgba(124,92,255,.85)}
+.muted{color:var(--muted); font-size:12px}
